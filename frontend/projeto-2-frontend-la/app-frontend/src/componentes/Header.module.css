@@ -1,0 +1,33 @@
+/* HEADER: === */
+header{
+    
+    box-shadow: 0px 0px 15px lab(34.29% 3.55 -3.37 / 0.3);
+    background: linear-gradient(180deg, #120018, #000000);
+
+}
+
+.caixa{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-left: 250px;
+    height: 75px;
+
+}
+
+.titulo{
+
+    padding-right: 40%;
+
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+
+}
+
+img{
+    cursor: pointer;
+}

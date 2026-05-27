@@ -1,0 +1,92 @@
+/* fundo escuro */
+.fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 100; 
+}
+
+
+.caixa_menu{
+
+position: absolute;
+right: 0;
+background: radial-gradient(circle at top, #120018, #000000);
+box-shadow:
+    -10px 0 30px rgba(123,44,255,0.3),
+    0 0 40px rgba(255,0,200,0.2);
+border-radius: 2%;
+
+width: 24%;
+height: 100%;
+
+z-index: 101;
+
+}
+
+/* User: */
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+
+    padding:15px;
+
+    cursor:pointer;
+}
+
+.nome{
+
+    font-family: var(--sans);
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+/*MENU: */
+a{
+    text-decoration: none;
+}
+
+.caixa_itens{
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.caixa_itens a {
+  color: #aaa;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.botao_menu:hover {
+    transform: scale(1);
+    box-shadow: 
+    0 0 20px rgba(53, 53, 53, 0.8),
+    0 0 30px hsla(240, 2%, 84%, 0.796);
+}
+
+
+.caixa_itens a:hover {
+  background: rgba(123,44,255,0.2);
+  color: white;
+}
+
+/* ITEM ATIVO */
+.ativo {
+  background: linear-gradient(90deg, #7b2cff, transparent);
+  color: white !important;
+  box-shadow: 0 0 10px rgba(123,44,255,0.6);
+}
+
+

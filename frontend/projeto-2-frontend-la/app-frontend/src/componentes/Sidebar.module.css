@@ -1,0 +1,53 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 220px;
+  height: 100vh;
+
+  background: rgba(10, 0, 20, 0.9);
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* LOGO */
+a{
+  margin-bottom: 20px;
+  cursor:pointer;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu a {
+  color: #aaa;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: rgba(123,44,255,0.2);
+  color: white;
+}
+
+/* ITEM ATIVO */
+.ativo {
+  background: linear-gradient(90deg, #7b2cff, transparent);
+  color: white !important;
+  box-shadow: 0 0 10px rgba(123,44,255,0.6);
+}

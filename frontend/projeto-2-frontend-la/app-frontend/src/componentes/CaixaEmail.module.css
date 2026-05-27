@@ -1,0 +1,108 @@
+.fundo{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 100;
+}
+
+/* CAIXA */
+.caixa_email{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(circle at top, #120018, #000000);
+    box-shadow:
+        0 0 60px rgba(123,44,255,0.4),
+        0 0 120px rgba(255,0,200,0.2);
+
+    border-radius: 20px;
+    width: 500px;
+    padding: 30px;
+
+    color: white;
+}
+
+/* FECHAR */
+.fechar{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    background: transparent;
+    border: 1px solid rgba(123,44,255,0.5);
+    color: white;
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+
+    cursor: pointer;
+}
+
+/* TITULO */
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CAMPOS */
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label{
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* INPUT E SELECT */
+input, select{
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(123,44,255,0.3);
+
+    background: rgba(255,255,255,0.05);
+    color:white;
+    
+    outline: none;
+}
+
+option{
+
+    color:gray;
+    font-weight: bold;
+
+}
+
+/* BOTÃO */
+.botao{
+    margin-top: 10px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(90deg, #7b2cff, #c800ff);
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(123,44,255,0.6);
+}

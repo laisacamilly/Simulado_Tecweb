@@ -1,0 +1,57 @@
+.caixa_titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-right: 2%;
+}
+
+.padrao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.caixa_icon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2px;
+
+    align-items: center;
+
+    padding: 2%;
+    gap: 10px;
+
+    margin-left: 20px;
+
+}
+
+.icon{
+    margin-top: 4px;
+}
+
+.linha{
+    position: relative;
+   
+    width: 60%;
+    height: 2px;
+
+    background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(34,197,94,0.3) 30%,
+    rgba(34,197,94,1) 50%,
+    rgba(34,197,94,0.3) 70%,
+    transparent 100%
+  );
+
+  box-shadow: 0 0 10px rgba(34,197,94,0.6);
+
+}
