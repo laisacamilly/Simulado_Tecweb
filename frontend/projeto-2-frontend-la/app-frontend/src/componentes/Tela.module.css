@@ -164,3 +164,42 @@ body{
   box-shadow: 0 0 10px rgba(34,197,94,0.6);
 
 }
+
+.caixa_simulado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+}
+
+.email{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.botaoS{
+
+    margin-top: 40px;
+    padding-left: 15px;
+
+    width: 100px;
+    height: 60px;
+
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    color: #f0f0f0;
+    font-weight: bold;
+    font-family: var(--sans);
+
+    background: linear-gradient(135deg, #ff00cc, #7b2cff);
+
+    box-shadow: 
+    0 0 10px rgba(255, 0, 200, 0.5),
+    0 0 20px rgba(123, 44, 255, 0.5);
+    
+    transition: 0.3s;
+
+}

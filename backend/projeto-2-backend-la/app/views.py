@@ -187,3 +187,6 @@ def resumo_ativo(request, symbol):
 
     except Exception as e:
         return Response({"erro": str(e)}, status=500)
+
+
+# ===== SIMULADO DA PROVA: =====
