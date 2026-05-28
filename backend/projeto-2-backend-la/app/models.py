@@ -7,3 +7,7 @@ class Favorito(models.Model):
 
     def __str__(self):
         return self.symbol
+    
+# ===== PRO SIMULADO: =====
+class FunFact(models.Model):
+    fact = models.CharField(max_length=100)

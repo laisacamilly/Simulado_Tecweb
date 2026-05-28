@@ -3,9 +3,13 @@ from rest_framework.response import Response
 from rest_framework import status
 import requests
 from django.conf import settings
+from django.core.cache import cache
+
+# Import dos MODELOS:
 from .models import Favorito
 
-from django.core.cache import cache
+from .models import FunFact
+from .serializers import FunFactSerializer
 
 
 BASE_URL = "https://real-time-finance-data.p.rapidapi.com/stock-quote"
@@ -190,3 +194,39 @@ def resumo_ativo(request, symbol):
 
 
 # ===== SIMULADO DA PROVA: =====
+
+# Pra funfact:
+@api_view(['GET', 'POST'])
+def funfact (request):
+
+    # ===== GET =====
+    # Ao receber uma requisão GET, deve retornar uma lista dos dados.
+    if request.method == 'GET':
+        todas_funfacts = FunFact.objects.all()
+
+        serializer = FunFactSerializer(todas_funfacts, many = True)
+
+        return Response(serializer.data, status = 200)
+    
+    # ===== POST =====
+    # Salva no banco a informação:
+    if request.method == 'POST':
+
+        # Traduza:Transforma o json em objeto python
+        serializer = FunFactSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save() #salva no banco
+
+            return Response(serializer.data) # retorna o objeto salvo em formato JSON.
+        
+        return Response(serializer.errors, status = 404)
+
+# Pra delete:
+@api_view(['DELETE'])
+def delete(request):
+
+    id = request.data.get("id")
+    FunFact.objects.get(id=id).delete()
+
+    return Response(status=204)
